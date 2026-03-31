@@ -1,6 +1,6 @@
 function Footer() {
     return (
-        <footer className="bg-[#F1F5F9] p-6 max-w-full mt-8">
+        <footer className="bg-[#F1F5F9] p-6 max-w-full">
             <div className="max-w-350 mx-auto flex items-center justify-between gap-18 px-4">
                 <h2 className="text-lg font-bold">The Editor Minimalist</h2>
                 <ul className="flex flex-wrap gap-4 col-auto text-gray-500 text-sm">
