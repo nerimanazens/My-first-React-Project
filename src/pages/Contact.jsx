@@ -1,17 +1,25 @@
-
+import { useState } from 'react'
 
 export default function ContactSection() {
+
+
+  const [ad, setAd] = useState("")
+  const [email, setEmail] = useState("")
+  const [mesaj, setMesaj] = useState("")
+  
   // Formanı idarə etmək üçün nümunə funksiya
   const handleSubmit = (e) => {
-    e.preventDefault();
-    // Burada API çağırışınızı edə bilərsiniz
-    alert("Mesajınız göndərildi!");
-  };
+    e.preventDefault()
+    alert(`Salam ${ad}! Mesajın göndərildi!`)
+    setAd("")
+    setEmail("")
+    setMesaj("")
+  }
 
   return (
     <section className="bg-[#f8f9fa] py-16 md:py-24 px-4 sm:px-6 lg:px-8 font-sans">
       <div className="max-w-7xl mx-auto">
-        
+
         {/* Başlıq Hissəsi */}
         <div className="mb-16 max-w-2xl">
           <h1 className="text-5xl md:text-6xl font-extrabold text-slate-800 tracking-tight mb-4 leading-tight">
@@ -25,18 +33,18 @@ export default function ContactSection() {
 
         {/* İki Sütunlu Grid Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
-          
+
           {/* Sol Sütun: Forma */}
           <div className="bg-white p-8 md:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-sm">
             <form onSubmit={handleSubmit} className="space-y-8">
-              
+
               {/* Full Name */}
               <div>
                 <label htmlFor="name" className="block text-[11px] font-bold text-gray-500 uppercase tracking-widest mb-3">
                   Full Name
                 </label>
-                <input type="text" id="name" name="name" placeholder="Who are you?" 
-                       className="w-full bg-[#eef1f3] text-slate-800 placeholder-gray-400 px-5 py-4 border-none focus:ring-2 focus:ring-slate-300 focus:outline-none rounded-sm transition-all" required />
+                <input type="text" id="name" name="name" placeholder="Who are you?"
+                  className="w-full bg-[#eef1f3] text-slate-800 placeholder-gray-400 px-5 py-4 border-none focus:ring-2 focus:ring-slate-300 focus:outline-none rounded-sm transition-all" required />
               </div>
 
               {/* Email */}
@@ -44,8 +52,8 @@ export default function ContactSection() {
                 <label htmlFor="email" className="block text-[11px] font-bold text-gray-500 uppercase tracking-widest mb-3">
                   Email Address
                 </label>
-                <input type="email" id="email" name="email" placeholder="Where can we reach you?" 
-                       className="w-full bg-[#eef1f3] text-slate-800 placeholder-gray-400 px-5 py-4 border-none focus:ring-2 focus:ring-slate-300 focus:outline-none rounded-sm transition-all" required />
+                <input type="email" id="email" name="email" placeholder="Where can we reach you?"
+                  className="w-full bg-[#eef1f3] text-slate-800 placeholder-gray-400 px-5 py-4 border-none focus:ring-2 focus:ring-slate-300 focus:outline-none rounded-sm transition-all" required />
               </div>
 
               {/* Message */}
@@ -53,13 +61,13 @@ export default function ContactSection() {
                 <label htmlFor="message" className="block text-[11px] font-bold text-gray-500 uppercase tracking-widest mb-3">
                   Your Message
                 </label>
-                <textarea id="message" name="message" rows="5" placeholder="Tell us everything..." 
-                          className="w-full bg-[#eef1f3] text-slate-800 placeholder-gray-400 px-5 py-4 border-none focus:ring-2 focus:ring-slate-300 focus:outline-none rounded-sm transition-all resize-none" required></textarea>
+                <textarea id="message" name="message" rows="5" placeholder="Tell us everything..."
+                  className="w-full bg-[#eef1f3] text-slate-800 placeholder-gray-400 px-5 py-4 border-none focus:ring-2 focus:ring-slate-300 focus:outline-none rounded-sm transition-all resize-none" required></textarea>
               </div>
 
               {/* Submit Button */}
-              <button type="submit" 
-                      className="bg-[#4d606f] hover:bg-[#3b4b57] text-white text-[11px] font-bold uppercase tracking-widest px-8 py-4 transition-colors rounded-sm w-max">
+              <button type="submit"
+                className="bg-[#4d606f] hover:bg-[#3b4b57] text-white text-[11px] font-bold uppercase tracking-widest px-8 py-4 transition-colors rounded-sm w-max">
                 Send Message
               </button>
             </form>
@@ -67,11 +75,11 @@ export default function ContactSection() {
 
           {/* Sağ Sütun: Məlumatlar */}
           <div className="flex flex-col space-y-10">
-            
+
             {/* Şəkil (Placeholder) */}
             <div className="w-full h-64 md:h-80 bg-gray-200 rounded-lg overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?q=80&w=2000&auto=format&fit=crop" 
-                   alt="Studio Desk" className="w-full h-full object-cover" />
+              <img src="https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?q=80&w=2000&auto=format&fit=crop"
+                alt="Studio Desk" className="w-full h-full object-cover" />
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">

@@ -1,7 +1,8 @@
-function Home() {
+function Home(props) {
   return (
-    <div className="bg-[#F5F7F9] min-h-screen">
 
+
+    <div className="bg-[#F5F7F9] min-h-screen">
       <section className="max-w-6xl mx-auto px-10 py-24 flex items-center justify-between gap-10">
         <div className="max-w-lg">
           <span className="text-xs font-medium border border-gray-300 px-3 py-1 rounded-full text-gray-500">VOLUME 01 // 2024</span>

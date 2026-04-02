@@ -1,14 +1,14 @@
+import { Link } from "react-router-dom";
+
 function Footer() {
     return (
         <footer className="bg-[#F1F5F9] p-6 max-w-full">
-            <div className="max-w-350 mx-auto flex items-center justify-between gap-18 px-4">
+            <div className="max-w-5xl mx-auto flex items-center justify-between gap-8 px-4">
                 <h2 className="text-lg font-bold">The Editor Minimalist</h2>
-                <ul className="flex flex-wrap gap-4 col-auto text-gray-500 text-sm">
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
+                <ul className="flex flex-wrap gap-4 text-gray-500 text-sm">
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/about">About</Link></li>
+                    <li><Link to="/contact">Contact</Link></li>
                 </ul>
                 <p>&copy; 2024 The Editor Minimalist. All rights reserved.</p>
             </div>
@@ -16,4 +16,4 @@ function Footer() {
     );
 }
 
-export default Footer
+export default Footer;
